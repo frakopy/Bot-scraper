@@ -5,8 +5,8 @@ from requests_html import HTMLSession
 #---------------------------Definicion de funciones -------------------------------------------------
 
 def notificar_telegram(precio1, precio2):
-    TOKEN = '1042288743:AAHbO-tsc7HuaQaulgXXXer3QKOFRfqJ2WQ'  
-    CHATID = '653960523'
+    TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'  
+    CHATID = 'xxxxxxxxxxxxxxx'
     TEXTO = f'El teclado Logitech MX keys, ha bajado de precio, antes => {precio1}, ahora => {precio2}'   
     requests.post(f'https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHATID}&text={TEXTO}')
 
@@ -19,8 +19,8 @@ def obtener_precio(url,x_path):
         return float(precio[4:])
     
     except:
-        TOKEN = '1042288743:AAHbO-tsc7HuaQaulgXXXer3QKOFRfqJ2WQ'  
-        CHATID = '653960523'
+        TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'  
+        CHATID = 'xxxxxxxxxxxxxx'
         TEXTO = 'Ups..algo salió mal, revisa el script del botscraper para el seguimiento del teclado'   
         requests.post(f'https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHATID}&text={TEXTO}')
 
